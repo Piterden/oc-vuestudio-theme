@@ -1,0 +1,7 @@
+name: 'VueStudio October Theme'
+description: 'Scaffolding VueJS SPA directly within CMS-module of October'
+author: 'Denis Efremov'
+homepage: 'http://web812.pro'
+code: oc-vuestudio-theme
+require:
+  - DEfr.VueTranslator

@@ -1,0 +1,41 @@
+{
+  "name": "oc-vuestudio-theme",
+  "version": "0.1.0",
+  "description": "VueStudio October Theme. Scaffolding VueJS SPA directly within CMS-module of October",
+  "homepage": "http://web812.pro",
+  "author": "Denis Efremov <efremov.a.denis@gmail.com>",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch",
+    "prod": "gulp --production"
+  },
+  "dependencies": {
+    "bulma": "^0.1.2",
+    "jquery": "^3.1.0",
+    "vue": "^1.0.26"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^6.0.0",
+    "cross-env": "^2.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "laravel-echo-server": "^0.9.1",
+    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir-image-optimize": "^1.0.1",
+    "laravel-elixir-uglify": "^2.0.0",
+    "laravel-elixir-webpack-advanced": "^0.3.9-2",
+    "node-sass": "^3.8.0",
+    "stylus": "^0.54.5",
+    "vue-laravel-echo": "0.0.1",
+    "vue-milligram": "0.0.1",
+    "vue-resource": "^0.9.3",
+    "vue-router": "^0.7.13",
+    "vuex": ">=0.6.2"
+  }
+}

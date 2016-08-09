@@ -1,0 +1,35 @@
+<template>
+  <nav class="nav">
+    <div class="nav-left">
+      my-project
+    </div>
+    <ul class="nav-item">
+      <li v-for="item in topMenuData">
+        <a v-link="item.link" class="button is-primary">
+          <span class="icon"><i class="fa fa-{{ item.icon }}"></i></span>
+          <span>{{ item.title }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+
+  data () {
+    return {
+      topMenuData: [
+        { title: 'Главная',   link: '/',          icon: 'home' },
+        { title: 'Портфолио', link: '/portfolio', icon: 'book' },
+        { title: 'Услуги',    link: '/services',  icon: 'list' },
+        { title: 'Контакты',  link: '/contacts',  icon: 'phone'}
+      ]
+    }
+  }
+
+}
+</script>
+
+<style lang="css" scoped>
+</style>

@@ -1,0 +1,68 @@
+==
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{ this.page.title }} | Web812</title>
+  <meta name="description" content="{{ this.page.meta_description }}">
+  <meta name="title" content="{{ this.page.meta_title }}">
+  <meta name="author" content="Denis Efremov">
+  <meta name="generator" content="VueJS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {# <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" /> #}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="{{ 'assets/css/bulma.css'|theme }}" rel="stylesheet">
+  {% styles %}
+  <link href="{{ 'assets/css/app.css'|theme }}" rel="stylesheet">
+  {#<script src="https://js.pusher.com/3.2/pusher.min.js"></script>
+  <script>
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+    var pusher = new Pusher('22f4db9d9cfae6d9dd31', {
+      encrypted: true
+    });
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+      alert(data.message);
+    });
+  </script>#}
+</head>
+
+<body class="{% block bodyclass %}{% endblock %}">
+  {% block body %}
+
+    <div class="pusher"></div>
+
+    <div id="App">
+
+      <header>
+        {% block nav %}
+          <top-menu></top-menu>
+        {% endblock %}
+      </header>
+
+      {% block showcase %}{% endblock %}
+
+      {% block main %}
+        <router-view>{% page %}</router-view>
+      {% endblock %}
+
+      <footer>
+        {% block footer %}{% endblock %}
+      </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"
+      integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+      crossorigin="anonymous"></script>
+    <script src="{{ 'assets/js/vendor.js'|theme }}"></script>
+
+    {% framework extras %}
+    {% scripts %}
+
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+
+  {% endblock %}
+</body>
+</html>

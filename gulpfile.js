@@ -10,7 +10,7 @@ Elixir(function(mix) {
   mix
     .styles('./node_modules/bulma/css/bulma.css')
     .sass('app.scss')
-    .webpack('../../../src/main.js', require('./webpack.config.js'), {
+    .webpack('../../../assets/main.js', require('./webpack.config.js'), {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'

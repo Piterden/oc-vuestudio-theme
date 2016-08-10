@@ -5,8 +5,8 @@ var p = require('path')
 var config = {
 
   production: Elixir.inProduction,
-  assetsPath: 'src',
-  publicPath: 'assets',
+  assetsPath: 'assets',
+  publicPath: 'build',
   appPath: '../../bootstrap',
   viewPath: 'pages',
   notifications: true,
@@ -71,7 +71,7 @@ var config = {
   },
 
   versioning: {
-    buildFolder: 'build'
+    buildFolder: 'versions'
   },
 
   browserSync: {

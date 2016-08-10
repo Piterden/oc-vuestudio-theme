@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <div class="nav-left">
-      my-project
+      Web812.Pro
     </div>
     <ul class="nav-item">
       <li v-for="item in topMenuData">
@@ -31,5 +31,5 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="sass" scoped>
 </style>

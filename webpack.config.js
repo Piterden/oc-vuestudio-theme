@@ -6,7 +6,7 @@ var path = require('path'),
 module.exports = {
   entry: {
     vendor: ['jquery'],
-    main: './src/main.js'
+    main: './assets/main.js'
   },
 
   // Output controls the settings for file generation.

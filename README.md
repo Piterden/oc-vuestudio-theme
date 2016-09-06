@@ -1,6 +1,6 @@
 # my-project
 
-> A Vue.js + router + resource + vuex + bluma project
+> A Vue.js + router + resource + vuex + Bulma project
 
 ## Build Setup
 
@@ -15,4 +15,3 @@ npm run dev
 npm run build
 ```
 
-For more information see the [docs for vueify](https://github.com/vuejs/vueify).

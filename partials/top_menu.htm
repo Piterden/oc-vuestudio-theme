@@ -1,19 +1,14 @@
 description = "Vue-Comp Top Menu"
 ==
-<template>
-  <nav class="nav">
-    <div class="nav-left">
-      Web812.Pro
-    </div>
-    <ul class="nav-item">
-      <li v-for="item in topMenuData">
-        <a v-link="item.link" class="button is-primary">
-          <span class="icon"><i class="fa fa-{{ item.icon }}"></i></span>
-          <span>{{ item.title }}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+<template lang="jade">
+  nav.nav
+    div.nav-left Web812.Pro
+    ul.nav-item
+      li(v-for="item in topMenuData")
+        a.button.is-primary(v-link="item.link")
+          span.icon
+            i(class="fa fa-{{ item.icon }}")
+          span {{ item.title }}
 </template>
 
 <script>
@@ -33,5 +28,24 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
+html, body {
+  font-family: Trebuchet, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+body {
+  overflow-y: hidden;
+}
+#App {
+  background: url('/themes/web-studio/assets/img/bg-index-big.jpg') scroll 100% -150px;
+  height: 845px;
+  header {
+    height: 115px;
+    position: fixed;
+    width: 100%;
+    a {
+      color: #fff;
+    }
+  }
+}
 </style>

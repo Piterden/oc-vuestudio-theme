@@ -9,11 +9,16 @@
   <meta name="author" content="Denis Efremov">
   <meta name="generator" content="VueJS">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   {# <link rel="icon" type="image/png" href="{{ 'build/images/october.png'|theme }}" /> #}
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
   <link href="{{ 'build/css/bulma.css'|theme }}" rel="stylesheet">
   {% styles %}
   <link href="{{ 'build/css/app.css'|theme }}" rel="stylesheet">
+
   {#<script src="https://js.pusher.com/3.2/pusher.min.js"></script>
   <script>
     // Enable pusher logging - don't include this in production
@@ -35,20 +40,21 @@
 
     <div id="App">
 
-      <header>
-        {% block nav %}
-          <top-menu></top-menu>
-        {% endblock %}
-      </header>
+      <header-el></header-el>
 
       {% block showcase %}{% endblock %}
 
       {% block main %}
-        <router-view>{% page %}</router-view>
+        <router-view
+          keep-alive
+          v-cloak
+        ></router-view>
       {% endblock %}
 
       <footer>
-        {% block footer %}{% endblock %}
+        {% block footer %}
+          <footer-area></footer-area>
+        {% endblock %}
       </footer>
 
     </div>
@@ -57,12 +63,10 @@
       integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
       crossorigin="anonymous"></script>
     <script src="{{ 'build/js/vendor.js'|theme }}"></script>
-
     {% framework extras %}
     {% scripts %}
-
     <script src="{{ 'build/js/main.js'|theme }}"></script>
 
-  {% endblock %}
+  {% endblock body %}
 </body>
 </html>

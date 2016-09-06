@@ -1,7 +1,5 @@
-<template>
-  <main class="router-view contacts-page">
-    Contacts
-  </main>
+<template lang="jade">
+  main.router-view.contacts-page Contacts
 </template>
 
 <script>

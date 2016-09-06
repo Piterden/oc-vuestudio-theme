@@ -1,7 +1,5 @@
-<template>
-  <main class="router-view services-page">
-    Services
-  </main>
+<template lang="jade">
+  main.router-view.services-page Services
 </template>
 
 <script>

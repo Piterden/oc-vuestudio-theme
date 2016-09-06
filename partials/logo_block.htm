@@ -1,0 +1,25 @@
+==
+<template lang="jade">
+  div.logo.wrapper
+    div.inner
+      img(v-bind:src="logo.src" v-bind:alt="logo.alt")
+</template>
+
+<script>
+export default {
+  
+  data() {
+    return {
+      logo: {
+        src: '/themes/web-studio/assets/img/logo-index-big.jpg',
+        alt: 'Вебстудия Санкт-Петербург'
+      }
+    }
+  }
+  
+}
+</script>
+
+<style lang="sass">
+  
+</style>

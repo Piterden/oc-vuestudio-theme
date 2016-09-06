@@ -1,10 +1,7 @@
-<template>
-  <main class="router-view error404-page">
-    <h1>{{ errorTitle }}</h1>
-    <div class="content">
-      {{ errorMsg }}
-    </div>
-  </main>
+<template lang="jade">
+  main.router-view.error404-page
+    h1 {{ errorTitle }}
+    div.content {{ errorMsg }}
 </template>
 
 <script>

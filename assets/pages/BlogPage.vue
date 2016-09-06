@@ -1,5 +1,5 @@
 <template lang="jade">
-  main.router-view.index-page Index
+  main.router-view.blog-page Blog
 </template>
 
 <script>

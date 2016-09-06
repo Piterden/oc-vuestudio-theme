@@ -1,5 +1,70 @@
 html, body {
   font-family: Trebuchet, Helvetica, sans-serif;
-  overflow-y: hidden; }
+  overflow-x: hidden; }
+
+body {
+  overflow-y: hidden;
+  letter-spacing: 2px; }
+
+.menutitle, .input {
+  font-family: Comfortaa;
+  color: rgba(255, 255, 255, 0.75);
+  border-color: transparent;
+  text-transform: uppercase;
+  -webkit-transition: all .45s linear;
+  transition: all .45s linear; }
+  .menutitle:hover, .input:hover {
+    color: rgba(255, 255, 255, 0.9); }
+
+#App {
+  background: url("/themes/web-studio/assets/img/bg-index-big.jpg") no-repeat scroll center 0; }
+  #App header {
+    height: 115px;
+    position: fixed;
+    width: 100%; }
+    #App header a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      -webkit-transition: all .45s linear;
+      transition: all .45s linear;
+      font-size: 16px; }
+      #App header a:hover {
+        color: rgba(255, 255, 255, 0.9); }
+    #App header.bottom nav {
+      padding-top: 0;
+      height: 100%; }
+    #App header.bottom .nav-item.search-field {
+      padding-top: 0;
+      height: 100%; }
+      #App header.bottom .nav-item.search-field .icon {
+        height: 30px; }
+
+.slide-transition {
+  -webkit-transition: width .45s linear;
+  transition: width .45s linear;
+  width: 90%;
+  overflow: hidden; }
+
+.slide-enter {
+  overflow: visible;
+  width: 0; }
+
+.slide-leave {
+  overflow: visible;
+  width: 0; }
+
+.border-transition {
+  -webkit-transition: border-color .45s linear;
+  transition: border-color .45s linear;
+  border-color: #fff;
+  border-width: 4px; }
+
+.border-enter {
+  border-color: transparent;
+  border-width: 0; }
+
+.border-leave {
+  border-color: transparent;
+  border-width: 0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,9 +1,11 @@
 {
   "name": "oc-vuestudio-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "VueStudio October Theme. Scaffolding VueJS SPA directly within CMS-module of October",
-  "homepage": "http://web812.pro",
   "author": "Denis Efremov <efremov.a.denis@gmail.com>",
+  "homepage": "http://web812.pro",
+  "repository": "https://github.com/Piterden/oc-vuestudio-theme",
+  "license": "MIT",
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch",
@@ -22,20 +24,24 @@
     "babel-runtime": "^6.0.0",
     "cross-env": "^2.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "fs": "0.0.2",
+    "file-loader": "^0.9.0",
+    "fs": "^0.0.2",
     "gulp": "^3.9.1",
     "gulp-notify": "^2.2.0",
-    "laravel-echo-server": "^0.9.1",
+    "jade": "^1.11.0",
+    "json-loader": "^0.5.4",
+    "laravel-echo-server": "^0.9.31",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-image-optimize": "^1.0.1",
     "laravel-elixir-uglify": "^2.0.0",
     "laravel-elixir-webpack-advanced": "^0.3.9-2",
     "node-sass": "^3.8.0",
     "stylus": "^0.54.5",
-    "vue-laravel-echo": "0.0.1",
-    "vue-milligram": "0.0.1",
+    "vue-helmet": "^1.1.5",
+    "vue-laravel-echo": "^0.0.1",
+    "vue-milligram": "^0.0.1",
     "vue-resource": "^0.9.3",
     "vue-router": "^0.7.13",
-    "vuex": ">=0.6.2"
+    "vuex": "^1.0.0-rc.2"
   }
 }

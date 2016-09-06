@@ -1,15 +1,15 @@
-var Elixir = require('laravel-elixir')
+var elixir = require('laravel-elixir')
 
 require('laravel-elixir-uglify')
 require('laravel-elixir-webpack-advanced')
 // require('laravel-elixir-image-optimize')
 
-Elixir.config = require('./elixir.conf.js')
+elixir.config = require('./elixir.conf.js')
 
-Elixir(function(mix) {
+elixir(function(mix) {
   mix
     .styles('./node_modules/bulma/css/bulma.css')
-    .sass('app.scss')
+    .sass('assets/sass/app.scss')
     .webpack('../../../assets/main.js', require('./webpack.config.js'), {
       $: 'jquery',
       jQuery: 'jquery',
@@ -17,5 +17,6 @@ Elixir(function(mix) {
     })
 
     // .imageOptimize(src,output,baseDir);
-})
 
+  // this.registerWatcher('sass', )
+})

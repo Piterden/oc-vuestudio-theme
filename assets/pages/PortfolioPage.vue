@@ -1,7 +1,5 @@
-<template>
-  <main class="router-view portfolio-page">
-    Portfolio
-  </main>
+<template lang="jade">
+  main.router-view.portfolio-page Portfolio
 </template>
 
 <script>

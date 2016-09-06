@@ -1,17 +1,17 @@
-var Elixir = require('laravel-elixir')
-var p = require('path')
-// var cssnext = require('cssnext')
+const p = require('path')
+var elixir = require('laravel-elixir')
+// const cssnext = require('cssnext')
 
 var config = {
 
-  production: Elixir.inProduction,
-  assetsPath: 'assets',
-  publicPath: 'build',
-  appPath: '../../bootstrap',
-  viewPath: 'pages',
+  production: elixir.inProduction,
+  assetsPath: 'assets/',
+  publicPath: 'build/',
+  appPath: '../../bootstrap/',
+  viewPath: 'pages/',
   notifications: true,
   muted: process.argv[1].indexOf('bin/_mocha') > -1,
-  sourcemaps: !Elixir.inProduction,
+  sourcemaps: !elixir.inProduction,
 
   batchOptions: {
     // https://github.com/floatdrop/gulp-batch#batchoptions-callback-errorhandler
@@ -36,24 +36,24 @@ var config = {
     },
     sass: {
       folder: 'sass',
-      search: '/**/*.+(sass|scss)',
+      search: /\.(sass|scss)$/,
       // https://github.com/sass/node-sass#options
       pluginOptions: {
-        outputStyle: Elixir.inProduction ? 'compressed' : 'nested',
+        outputStyle: elixir.inProduction ? 'compressed' : 'nested',
         precision: 10
       }
-    },
-    less: {
-      folder: 'less',
-      search: '/**/*.less',
-      // https://github.com/plus3network/gulp-less#options
-      pluginOptions: {}
     }
+    // less: {
+    //   folder: 'less',
+    //   search: /\.(less)$/,
+    //   // https://github.com/plus3network/gulp-less#options
+    //   pluginOptions: {}
+    // }
     // postcss: [cssnext()]
   },
 
   js: {
-    folder: '.',
+    folder: '',
     outputFolder: 'js'
   },
 
@@ -84,13 +84,13 @@ var config = {
 }
 
 config.get = function(path) {
-  var basePath
-  var current = config
-  var segments = path.split('.')
+  var segments = path.split('.'), basePath, current = config
   if(segments[0] == 'assets' || segments[0] == 'public') {
     basePath = config[segments.shift() + 'Path']
   }
-  segments.forEach(segment => current = current[segment])
+  segments.forEach(function(segment) {
+    current = current[segment]
+  })
   return p.join(basePath, current)
 }
 
